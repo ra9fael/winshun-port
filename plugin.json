@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LingCore/WinShun-plugins/main/schema/plugin.schema.json",
+  "manifest": 1,
+  "id": "ra9fael.port",
+  "name": {"zh": "端口占用", "en": "Port usage"},
+  "version": "0.1.0",
+  "description": {
+    "zh": "查端口被谁占用：port 8080 列出监听/连接该端口的进程，Enter 结束，Ctrl+Enter 连子进程；留空列出全部监听端口",
+    "en": "Find what occupies a port: port 8080 lists processes on it, Enter kills, Ctrl+Enter kills the tree; empty lists all listening ports"
+  },
+  "author": "ra9fael",
+  "homepage": "https://github.com/ra9fael/winshun-port",
+  "license": "MIT",
+  "minWinShun": "0.22.0",
+  "permissions": ["processes", "clipboard:write", "elevated"],
+  "runtime": {
+    "mode": "resident",
+    "program": "port.exe",
+    "sandbox": "normal",
+    "start": "lazy",
+    "timeoutMs": 1500,
+    "memoryMB": 64,
+    "idleExitSec": 300
+  },
+  "commands": [
+    {
+      "id": "port",
+      "keyword": ["port", "端口"],
+      "title": {"zh": "端口", "en": "Port"},
+      "hint": {"zh": "端口号如 8080 或 :8080；留空列出全部监听", "en": "a port like 8080 or :8080; empty lists all listeners"},
+      "actions": [
+        {"id": "kill", "title": {"zh": "结束进程", "en": "Kill process"}, "key": "Enter"},
+        {"id": "killTree", "title": {"zh": "连同子进程", "en": "Kill with children"}, "key": "Ctrl+Enter"},
+        {"id": "copyCmdline", "title": {"zh": "复制命令行", "en": "Copy command line"}, "key": "Shift+Enter"},
+        {"id": "openFolder", "title": {"zh": "打开所在目录", "en": "Open folder"}, "key": ""},
+        {"id": "killAdmin", "title": {"zh": "以管理员结束（UAC）", "en": "Kill as administrator (UAC)"}, "key": ""}
+      ],
+      "ai": {
+        "description": "Show which processes occupy a TCP/UDP port (v4 and v6), with PID, process name, path and socket state, or list all listening ports when the query is empty. Actions kill the process or its tree; killing system-owned listeners requires UAC. Destructive only on explicit action."
+      }
+    }
+  ],
+  "settings": [
+    {"key": "showEstablished", "type": "bool", "title": {"zh": "显示已建立的连接", "en": "Show established connections"}, "default": true},
+    {"key": "showSystem", "type": "bool", "title": {"zh": "显示系统级条目", "en": "Show system entries"}, "hint": {"zh": "PID 4 等看不到进程信息的监听", "en": "PID 4 and other listeners without visible process info"}, "default": true},
+    {"key": "maxRows", "type": "number", "title": {"zh": "留空查询最多行数", "en": "Max rows for empty query"}, "hint": {"zh": "10–200，默认 30", "en": "10–200, default 30"}, "default": 30}
+  ]
+}
