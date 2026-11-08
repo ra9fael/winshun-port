@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="336" viewBox="0 0 760 336" role="img" aria-label="port 7897 的查询结果：TCP 监听、对端命中、UDP 绑定三行">
+  <defs>
+    <filter id="card" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="760" height="336" fill="#f1f5f9"/>
+
+  <g filter="url(#card)">
+    <rect x="20" y="18" width="720" height="282" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  </g>
+
+  <!-- 搜索框 -->
+  <rect x="40" y="36" width="680" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="60" y="64" font-family="Cascadia Mono, Consolas, monospace" font-size="15" fill="#0f172a">port  7897</text>
+  <text x="700" y="64" text-anchor="end" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">3 条</text>
+
+  <!-- 行 1：TCP 监听 -->
+  <circle cx="58" cy="121" r="4.5" fill="#2563eb"/>
+  <text x="74" y="117" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#0f172a">TCP 127.0.0.1:7897</text>
+  <text x="74" y="137" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11.5" fill="#64748b">clash-verge-service.exe · PID 2684 · LISTEN · C:\ProgramData\…\cores\clash-verge-service.exe</text>
+  <rect x="612" y="108" width="92" height="24" rx="6" fill="#eff6ff" stroke="#dbeafe"/>
+  <text x="658" y="124" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11" fill="#1d4ed8">Enter 结束进程</text>
+  <line x1="46" y1="154" x2="714" y2="154" stroke="#f1f5f9"/>
+
+  <!-- 行 2：对端命中 -->
+  <circle cx="58" cy="183" r="4.5" fill="#2563eb"/>
+  <text x="74" y="179" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#0f172a">TCP 127.0.0.1:52104 → 104.18.32.7:7897</text>
+  <text x="74" y="199" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11.5" fill="#64748b">对端端口 · clash-verge-service.exe · PID 2684 · ESTABLISHED · 同一进程共 2 个端口</text>
+  <line x1="46" y1="216" x2="714" y2="216" stroke="#f1f5f9"/>
+
+  <!-- 行 3：UDP 绑定 -->
+  <circle cx="58" cy="245" r="4.5" fill="#d97706"/>
+  <text x="74" y="241" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#0f172a">UDP 127.0.0.1:7897</text>
+  <text x="74" y="261" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11.5" fill="#64748b">clash-verge-service.exe · PID 2684 · 同一进程共 2 个端口</text>
+  <line x1="46" y1="278" x2="714" y2="278" stroke="#f1f5f9"/>
+
+  <!-- 底部快捷键提示 -->
+  <text x="40" y="320" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">↑↓ 选择 · Enter 结束进程 · Ctrl+Enter 连同子进程 · Shift+Enter 复制命令行 · 右键查看更多动作</text>
+</svg>

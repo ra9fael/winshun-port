@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="268" viewBox="0 0 760 268" role="img" aria-label="两段确认：第一次 Enter 武装该行，第二次 Enter 才结束进程">
+  <defs>
+    <filter id="card" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="9" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="760" height="268" fill="#f1f5f9"/>
+
+  <text x="30" y="30" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13" fill="#475569">第一次 Enter：只武装这一行，查询会重跑一次</text>
+
+  <!-- 普通行 -->
+  <g filter="url(#card)">
+    <rect x="20" y="42" width="720" height="64" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  </g>
+  <circle cx="46" cy="74" r="4.5" fill="#2563eb"/>
+  <text x="62" y="70" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14.5" font-weight="600" fill="#0f172a">TCP 127.0.0.1:7897</text>
+  <text x="62" y="90" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11.5" fill="#64748b">clash-verge-service.exe · PID 2684 · LISTEN · 同一进程共 2 个端口</text>
+  <rect x="614" y="62" width="92" height="24" rx="6" fill="#eff6ff" stroke="#dbeafe"/>
+  <text x="660" y="78" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11" fill="#1d4ed8">Enter 结束进程</text>
+
+  <!-- 中间的箭头与说明 -->
+  <line x1="380" y1="112" x2="380" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 376 126 L 380 132 L 384 126" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="394" y="126" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">再按一次 Enter</text>
+
+  <!-- 武装行 -->
+  <g filter="url(#card)">
+    <rect x="20" y="146" width="720" height="64" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  </g>
+  <text x="44" y="178" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14.5" font-weight="600" fill="#b91c1c">⚠ 确认结束 clash-verge-service.exe（PID 2684）？</text>
+  <text x="44" y="198" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11.5" fill="#dc2626">再按 Enter 执行</text>
+  <rect x="614" y="166" width="92" height="24" rx="6" fill="#ffffff" stroke="#fecaca"/>
+  <text x="660" y="182" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="11" fill="#b91c1c">Enter 确认</text>
+
+  <text x="30" y="240" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">换一种查询（文本变化）或该行已消失时，武装状态自动解除；Ctrl+Enter 的确认行会额外写明确认结束的进程数。</text>
+</svg>

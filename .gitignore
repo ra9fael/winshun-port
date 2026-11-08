@@ -7,3 +7,5 @@ dist/
 *.bak
 *.old
 data/
+Testing/
+build-release/

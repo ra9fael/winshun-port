@@ -1,5 +1,17 @@
 # ra9fael.port 发布与安装流程
 
+```mermaid
+flowchart LR
+    A["Release 构建<br/>port.exe"] --> B["打包 4 个文件<br/>.wsplugin = zip"]
+    B --> C["SHA-256 校验"]
+    C --> D["tag v&lt;ver&gt; + GitHub Release"]
+    D --> E["用户安装<br/>本地安装 / 手动解包"]
+    E --> F["停用 → 启用<br/>权限确认"]
+    F --> G["输入 port 使用"]
+    D -.->|"升级"| E
+    D -.->|"回滚：装旧版包"| E
+```
+
 ## 构建
 
 纯 Win32 + CRT 的 `port.exe`（静态链接 CRT，链接 iphlpapi/advapi32/ole32 等），无 Qt 依赖，manifest 不声明 `runtime.qt`。
