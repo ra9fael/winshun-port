@@ -35,8 +35,8 @@ cmake --build build
 
 ## 发布
 
-1. `git tag v<ver> && git push origin main --tags`
-2. GitHub Release `v<ver>`：上传 `.wsplugin`；release notes 写变更点、SHA-256、构建命令，并注明：kill 为危险操作需确认，系统级监听（PID 4 等）结束需 UAC
+1. 先手动运行 `release.yml`，指定源码 `ref` 且 `publish=false`；通过后创建并单独推送 `v<ver>` 标签：`git tag -a v<ver> -m "Release v<ver>"`、`git push origin v<ver>`
+2. GitHub Actions 自动创建 Release `v<ver>` 并上传 `.wsplugin`；release notes 写变更点、SHA-256、构建命令，并注明：kill 为危险操作需确认，系统级监听（PID 4 等）结束需 UAC
 3. 声明为社区原生包（`unreviewed-native`）
 
 ## 安装（用户）
@@ -58,3 +58,6 @@ cmake --build build
 ## 回滚
 
 - GitHub Release 保留历史版本；下载旧 `.wsplugin` 覆盖安装即可
+
+
+当前发布入口仅为新版本 tag 与手动运行。新 tag 会自动构建、测试、打包并发布；已有 tag 更新/删除、分支 push 和 PR 不触发。手动发布须指定已有版本 tag 并设置 `publish=true`，不得覆盖已有 Release 附件。完整参数见 [WORKFLOWS.md](../WORKFLOWS.md)。
