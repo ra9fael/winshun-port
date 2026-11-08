@@ -7,6 +7,14 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-08
+
+### Fixed
+
+- `tools/*.ps1` 存成带 BOM 的 UTF-8：插件库检查要求 PowerShell 脚本带
+  BOM，否则 Windows PowerShell 5.1 里中文会乱码。0.1.0 的包因此未被
+  收录，请用 0.1.1。
+
 ## [0.1.0] - 2026-11-08
 
 ### Added

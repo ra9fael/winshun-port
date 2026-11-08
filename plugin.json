@@ -3,7 +3,7 @@
   "manifest": 1,
   "id": "ra9fael.port",
   "name": {"zh": "端口占用", "en": "Port usage"},
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": {
     "zh": "查端口被谁占用：port 8080 列出监听/连接该端口的进程，Enter 结束，Ctrl+Enter 连子进程；port java 反查某进程占的所有端口；留空列出全部监听端口",
     "en": "Find what occupies a port: port 8080 lists processes on it, Enter kills, Ctrl+Enter kills the tree; port java lists every port a process holds; empty lists all listening ports"

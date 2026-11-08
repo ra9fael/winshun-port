@@ -1,4 +1,4 @@
-# crosscheck.ps1 — docs/tests.md §3: every socket row the empty query returns
+﻿# crosscheck.ps1 — docs/tests.md §3: every socket row the empty query returns
 # must be backed by the OS's own socket lists.
 #
 # The reference is Get-NetTCPConnection / Get-NetUDPEndpoint, not

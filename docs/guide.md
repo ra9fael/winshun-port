@@ -9,7 +9,7 @@
 
 ```mermaid
 flowchart TD
-    A["下载 ra9fael.port-0.1.0.wsplugin"] --> B["Win顺 → 插件管理 → 本地安装"]
+    A["下载 ra9fael.port-0.1.1.wsplugin"] --> B["Win顺 → 插件管理 → 本地安装"]
     B --> C["确认 unreviewed-native 提示"]
     C --> D["确认权限：进程枚举与结束、剪贴板、提权"]
     D --> E["停用 → 启用（或重启 Win顺）"]

@@ -1,4 +1,4 @@
-# testtree_smoke.ps1 — verify TestTree.exe builds the three-level tree that
+﻿# testtree_smoke.ps1 — verify TestTree.exe builds the three-level tree that
 # the killTree E2E depends on, then clean up. Run after `cmake --build build`.
 $ErrorActionPreference = 'Stop'
 $exe = Join-Path $PSScriptRoot '..\build\tools\TestTree.exe'

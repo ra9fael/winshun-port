@@ -1,4 +1,4 @@
-# e2e.ps1 — protocol roundtrip for port.exe (docs/tests.md §2), driven from
+﻿# e2e.ps1 — protocol roundtrip for port.exe (docs/tests.md §2), driven from
 # the shell instead of the host UI: initialize → query (miss / hit) →
 # two-stage kill → shutdown. The kill target is a child PowerShell holding a
 # loopback listener on 18765, so the test never ends a system process.
